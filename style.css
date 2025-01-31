@@ -2,10 +2,13 @@
 
 :root{
   --font: rgba(240, 240, 240, 255);
-  --void: rgba(0, 0, 0, 0)
+  --void: rgba(0, 0, 0, 0);
+  --border: 0.2em:
 }
 
 body {
+  margin:0;
+  padding: 0;
   height: 100vh;
   background-image: radial-gradient(1000px,#012, #000);
   display: flex;
@@ -25,6 +28,33 @@ body {
     color: var(--font);
   }
 }
+
+@keyframes jump {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.triangle-down {
+  position: relative;
+  top: -5px;
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-right: 0.35em solid white;
+  border-top: 0.35em solid white;
+  transform: rotate(135deg);
+  /* margin-right: 0.5em; */
+  /* margin-left: 1.0em; */
+}
+
 h2, span {
   color: var(--font);
 }
@@ -33,10 +63,30 @@ span {
   font-weight: bold;
 }
 
+h2 {
+  background-image: radial-gradient(ellipse at 50% 60%, rgba(50,50,100,10) , rgba(0,0,0,0) 40%);
+}
+
 .white {
-  color: var(--font)
+  /* color: var(--font); */
+  color: #eee;
 }
 
 .red {
-  color: #b15
+  color: #c15
 }
+
+#triangle {
+  position: absolute;
+  color: white;
+  line-height: 10px;
+  width: min-content;
+  height: min-content;
+  top: 80vh;
+  left: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  animation: jump 2s ease-in-out infinite;
+}
+
+
