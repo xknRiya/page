@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --font: rgba(240, 240, 240, 255);
+  --void: rgba(0, 0, 0, 0)
+}
+
+body {
+  height: 100vh;
+  background-image: radial-gradient(1000px,#012, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-family: monospace, system-ui, Roboto; */
+  font-family: monospace, system-ui, Roboto;
+  font-size-adjust: 1.5;
+  white-space: pre;
+}
+
+@keyframes anim {
+  0% {
+    color: var(--void);
+  }
+  100% {
+    color: var(--font);
+  }
+}
+h2, span {
+  color: var(--font);
+}
+span {
+  /* animation: anim 2s linear 1; */
+  font-weight: bold;
+}
+
+.white {
+  color: var(--font)
+}
+
+.red {
+  color: #b15
+}
