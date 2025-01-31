@@ -87,6 +87,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   animation: jump 2s ease-in-out infinite;
+  transition: rotate .4s ease-in-out;
 }
 
 
